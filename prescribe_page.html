@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prescribe Medication</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="finalcss.css">
+
+</head>
+
+<body style="font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f8f9fa;">
+    <header>
+        <figure style="display: flex; flex-direction: column; align-items: center; margin-right: 20px; text-align: center;">
+            <img src="logo2.png" alt="Logo" style="height: 100px; margin: 0;">
+        </figure>
+        <nav style="flex: 1;">
+            <ul style="list-style-type: none; display: flex; margin: 0; padding: 0; justify-content: center;">
+                <li style="margin: 0 30px; font-size: 18px;"><a href="Home.html" style="text-decoration: none; color: #152a3b; font-weight: bold; position: relative;">Home</a></li>
+                <li style="margin: 0 30px; font-size: 18px;"><a href="#" style="text-decoration: none; color: #152a3b; font-weight: bold; position: relative;">About Us</a></li>
+            </ul>
+        </nav>
+        <div style="display: flex; align-items: center;">
+            <a href="home.html"><button style="background-color: #152a3b; color: white; border: none; border-radius: 4px; padding: 12px 24px; margin-left: 10px; cursor: pointer; font-size: 16px; min-width: 120px; max-width: 120px;">log out</button></a>
+           
+        </div>
+    </header>
+
+
+
+
+    <!-- Breadcrumbs -->
+    <nav class="breadcrumb">
+        <a href="Home.html">Home</a>
+        <span>&gt;</span>
+        <a href="doctor_page.html">Doctor</a>
+        <span>&gt;</span>
+        <a href="prescribe_page.html">Prescribe Medication</a>
+    </nav>
+
+    <div class="prescribe-container">
+        <h1><strong>Patient's Medications</strong></h1>
+        <form id="prescribe-medicationForm" onsubmit="return handleSubmit(event)">
+            <div class="prescribe-form-group">
+                <label for="prescribe-patientName">Patient's Name:</label>
+                <input type="text" id="prescribe-patientName" value="Leena Naser" required>
+            </div>
+
+            <div class="prescribe-form-group">
+                <label for="prescribe-patientAge">Age:</label>
+                <input type="number" id="prescribe-patientAge" value="40" required>
+            </div>
+
+            <div class="prescribe-form-group">
+                <label>Gender:</label>
+                <div>
+                    <input type="radio" id="prescribe-male" name="prescribe-gender" value="Male" required>
+                    <label for="prescribe-male">Male</label>
+                </div>
+                <div>
+                    <input type="radio" id="prescribe-female" name="prescribe-gender" value="Female" required>
+                    <label for="prescribe-female">Female</label>
+                </div>
+            </div>
+
+            <div class="prescribe-form-group prescribe-medications">
+                <label>Medications:</label>
+                <div>
+                    <input type="checkbox" id="prescribe-med1" value="Aspirin">
+                    <label for="prescribe-med1">Aspirin</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="prescribe-med2" value="Ibuprofen">
+                    <label for="prescribe-med2">Ibuprofen</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="prescribe-med3" value="Paracetamol">
+                    <label for="prescribe-med3">Paracetamol</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="prescribe-med4" value="Antibiotics">
+                    <label for="prescribe-med4">Antibiotics</label>
+                </div>
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <footer>
+        <div style="max-width: 1200px; margin: auto; color: #bdc5c7;">
+            <div style="margin-top: 20px;">
+                <a href="#" style="margin: 0 10px; border: 2px solid #198b93; border-radius: 50%; width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center; text-decoration: none; color: #198b93;">
+                    <i class="fab fa-facebook-f" style="font-size: 16px;"></i>
+                </a>
+                <a href="#" style="margin: 0 10px; border: 2px solid #198b93; border-radius: 50%; width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center; text-decoration: none; color: #198b93;">
+                    <i class="fab fa-twitter" style="font-size: 16px;"></i>
+                </a>
+                <a href="#" style="margin: 0 10px; border: 2px solid #198b93; border-radius: 50%; width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center; text-decoration: none; color: #198b93;">
+                    <i class="fab fa-instagram" style="font-size: 16px;"></i>
+                </a>
+                <a href="mailto:info@clinicname.com" style="margin: 0 10px; border: 2px solid #198b93; border-radius: 50%; width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center; text-decoration: none; color: #198b93;">
+                    <i class="fas fa-envelope" style="font-size: 16px;"></i>
+                </a>
+                <a href="https://wa.me/+1234567890" style="margin: 0 10px; border: 2px solid #198b93; border-radius: 50%; width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center; text-decoration: none; color: #198b93;">
+                    <i class="fab fa-whatsapp" style="font-size: 16px;"></i>
+                </a>
+            </div>
+            <p style="margin-top: 20px;">&copy; 2025 Reviva. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault(); // Prevent default form submission
+            // Redirect to the home page
+            window.location.href = 'doctor_page.html'; hello 
+        }
+    </script>
+</body>
+</html>

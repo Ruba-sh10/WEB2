@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="finalcss.css">
+    <title>Log In</title>
+    <style>
+  
+        .container-login {
+            max-width: 400px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"], input[type="password"], input[type="email"] {
+            width: 90%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #5cb85c;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #4cae4c;
+        }
+        .toggle-link {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .radio-group {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 15px;
+        }
+      
+    </style>
+</head>
+<body>
+    <header>
+        <figure style="display: flex; flex-direction: column; align-items: center; margin-right: 20px; text-align: center;">
+            <img src="logo2.png" alt="Logo" style="height: 100px; margin: 0;">
+        </figure>
+        <nav style="flex: 1;">
+            <ul style="list-style-type: none; display: flex; margin: 0; padding: 0; justify-content: center;">
+                <li style="margin: 0 30px; font-size: 18px;"><a href="Home.html" style="text-decoration: none; color: #152a3b; font-weight: bold; position: relative;">Home</a></li>
+                <li style="margin: 0 30px; font-size: 18px;"><a href="about-us.html" style="text-decoration: none; color: #152a3b; font-weight: bold; position: relative;">About Us</a></li>
+            </ul>
+        </nav>
+        
+    </header>
+
+    <!-- Breadcrumbs -->
+    <nav class="breadcrumb">
+        <a href="Home.html">Home</a>
+        <span>&gt;</span>
+        <a href="log_in.html">Log In</a>
+    </nav>
+
+    <div class="container-login">
+        <h2>Log In</h2>
+        <div class="form-group radio-group">
+            <label>
+                <input type="radio" name="role" id="patient" value="patient" onclick="showForm('patient')" checked>
+                Patient
+            </label>
+            <label>
+                <input type="radio" name="role" id="doctor" value="doctor" onclick="showForm('doctor')">
+                Doctor
+            </label>
+        </div>
+        <form id="log-in-form" onsubmit="handleSubmit(event)">
+            <div class="form-group">
+                <label for="log-in-email">Email</label>
+                <input type="email" id="log-in-email"  value="ahmed.ali@example.com" required>
+            </div>
+            <div class="form-group">
+                <label for="log-in-password">Password</label>
+                <input type="password" id="log-in-password" value="password123" required>
+            </div>
+            <button type="submit">Log In</button>
+        </form>
+        <div class="toggle-link">
+            <a href="sign_in.html">Don't have an account? Sign In</a>
+        </div>
+    </div>
+
+    <footer>
+        <div style="max-width: 1200px; margin: auto; color: #bdc5c7;">
+            <div style="margin-top: 20px;">
+                <a href="#" style="margin: 0 10px; border: 2px solid #198b93; border-radius: 50%; width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center; text-decoration: none; color: #198b93;">
+                    <i class="fab fa-facebook-f" style="font-size: 16px;"></i>
+                </a>
+                <a href="#" style="margin: 0 10px; border: 2px solid #198b93; border-radius: 50%; width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center; text-decoration: none; color: #198b93;">
+                    <i class="fab fa-twitter" style="font-size: 16px;"></i>
+                </a>
+                <a href="#" style="margin: 0 10px; border: 2px solid #198b93; border-radius: 50%; width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center; text-decoration: none; color: #198b93;">
+                    <i class="fab fa-instagram" style="font-size: 16px;"></i>
+                </a>
+                <a href="mailto:info@clinicname.com" style="margin: 0 10px; border: 2px solid #198b93; border-radius: 50%; width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center; text-decoration: none; color: #198b93;">
+                    <i class="fas fa-envelope" style="font-size: 16px;"></i>
+                </a>
+                <a href="https://wa.me/+1234567890" style="margin: 0 10px; border: 2px solid #198b93; border-radius: 50%; width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center; text-decoration: none; color: #198b93;">
+                    <i class="fab fa-whatsapp" style="font-size: 16px;"></i>
+                </a>
+            </div>
+            <p style="margin-top: 20px;">&copy; 2025 Reviva. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault(); // Prevent the default form submission
+            
+            const role = document.querySelector('input[name="role"]:checked').value;
+            
+            // Redirect based on the selected role
+            if (role === 'patient') {
+                window.location.href = 'patient-homepage.html'; // Replace with actual patient page URL
+            } else {
+                window.location.href = 'doctor_page.html'; // Replace with actual doctor page URL
+            }
+            
+            return false; // Prevent any further handling
+        }
+    </script>
+</body>
+</html>

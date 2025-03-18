@@ -1,0 +1,703 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+header {
+    position: sticky; /* Make header sticky */
+    top: 0; /* Stick to the top */
+    background-color: white; 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    padding: 10px 20px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    z-index: 1000; /* Ensure it stays above other elements */
+}
+ button {
+    width: 100%;
+    padding: 10px;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #4cae4c;
+}
+.hidden {
+    display: none;
+}
+#main-nav ul#HEAD-list li.HEAD-item a:hover {
+color: #007bff;
+}
+
+#main-nav ul#HEAD-list li.HEAD-item a:hover::after {
+width: 100%; 
+left: 0; 
+}
+
+.prescribe-container {
+flex: 1; 
+width: 900px; 
+max-width: 90%; 
+padding: 20px; 
+border: 2px solid #ccc; 
+border-radius: 8px; 
+background-color: #fff; 
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+margin: auto; 
+margin-bottom: 20px; 
+margin-top: 20px; 
+}
+
+#h1-med {
+font-size: 24px; 
+margin-bottom: 20px; 
+text-align: center;
+}
+
+.prescribe-form-group {
+margin-bottom: 15px; 
+text-align: left; 
+width: 100%; 
+}
+
+.prescribe-form-group label {
+font-weight: bold; 
+margin: 10px; 
+}
+
+.prescribe-form-group input[type="text"],
+.prescribe-form-group input[type="number"] {
+width: 100%; 
+padding: 8px; 
+border: 1px solid #ccc; 
+border-radius: 4px; 
+box-sizing: border-box; 
+}
+
+.prescribe-form-group input[type="radio"],
+.prescribe-form-group input[type="checkbox"] {
+margin-right: 5px; 
+}
+
+.prescribe-medications label {
+display: inline; 
+margin-left: 5px; 
+}
+
+button:hover {
+background-color: #0056b3 !important; 
+transform: scale(1.05); 
+}
+
+.hero::before {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-image: url('back.jpg');
+background-size: cover;
+background-position: center;
+opacity: 1 ;
+z-index: -1;
+}
+
+
+footer {
+    margin-top: 40px; /* Space between the form and footer */
+    background-color: #152a3b; 
+    padding: 20px; 
+    text-align: center; 
+    border-top: 1px solid #bdc5c7;
+}
+footer a {
+    transition: background-color 0.3s, color 0.3s;
+}
+footer a:hover {
+    background-color: #b9ebda; /* Change background to light color on hover */
+    color: #152a3b; /* Change icon color on hover */
+}
+
+
+nav {
+    flex: 1;
+    margin-top: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 30px;
+    font-size: 18px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #152a3b;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+nav a:hover {
+    color: #198b93;
+}
+
+.HEADauth {
+    display: flex;
+    align-items: center;
+}
+
+.HEADauth button {
+    background-color: #152a3b;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 12px 24px;
+    margin-left: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.breadcrumb {
+    padding: 10px 20px;
+    background-color: #f8f9fa;
+    display: flex;
+    gap: 5px;
+}
+
+.breadcrumb a {
+    text-decoration: none;
+    color: #152a3b;
+}
+
+.doctor-section {
+    margin: 20px 0;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Service Cards */
+.services-home {
+    display: flex;
+    flex: space-between;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px; /* Space between cards */
+    padding: 20px 0;
+}
+
+.service-card {
+    border: 1px solid #eaeaea;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Review Section */
+.reviews-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two boxes side by side */
+    gap: 20px; /* Space between review boxes */
+    padding: 20px;
+}
+
+.review-card {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: box-shadow 0.3s;
+    max-width: 400px;
+    margin: auto; /* Center the review cards */
+}
+
+.review-card:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+label {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+select, input, textarea {
+    font-size: 1rem;
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 0.7em 1.5em;
+    font-size: 1rem;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+
+
+.logout {
+    color: blue;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+
+.info-link {
+    display: block;
+    margin: 20px 0;
+    color: blue;
+    text-decoration: none;
+}
+
+.book-appointment {
+    float: right;
+    margin-bottom: 10px;
+    color: blue;
+    text-decoration: none;
+	  top: 20px;
+    right: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.cancel {
+    color: red;
+    text-decoration: none;
+}
+
+
+
+h1, h2 {
+    margin: 1em 0;
+    text-align: center;
+}
+
+main {
+    max-width: 600px;
+    margin: 2em auto;
+    padding: 2em;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.container-signIn {
+    max-width: 400px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+h2 {
+    text-align: center;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+input[type="text"], input[type="password"], input[type="email"], input[type="date"], input[type="file"], select {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #4cae4c;
+}
+.hidden {
+    display: none;
+}
+.radio-group {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 15px;
+}
+
+
+
+
+#patient-info {
+    background: #fff;
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+#patient-info h2 {
+    text-align: center;
+    color: #333;
+    border-bottom: 2px solid #007BFF;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+#patient-info p {
+    font-size: 16px;
+    color: #555;
+    margin: 10px 0;
+}
+#patient-info p strong {
+    color: #333;
+}
+#patient-info p span {
+    color: #198b93;
+
+
+    font-weight: bold;
+
+}
+
+
+
+
+.container-staff {
+    max-width: 1200px;
+    margin: 50px auto;
+
+    text-align: center;
+}
+
+#MedicalStaff {
+    color: #1e2a38;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.underline {
+    width: 60px;
+    height: 4px;
+    background-color: #1e2a38;
+    margin: 0 auto 40px;
+    position: relative;
+}
+
+.underline::before {
+    content: '';
+    width: 20px;
+    height: 4px;
+    background-color: #e74c3c;
+    position: absolute;
+    left: -30px;
+}
+
+.staff-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.staff-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 280px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.staff-card:hover {
+    transform: translateY(-5px);
+}
+
+.staff-card img {
+    width: 80%;  /* تقليل العرض ليصبح أضيق */
+    height: 200px;  /* تحديد ارتفاع أطول */
+    border-bottom: 3px solid #1e2a38;
+    border-radius: 10px 10px 0 0;
+    object-fit: cover; /* يضمن تغطية الصورة بالكامل دون تشويه */
+    display: block;
+    margin: 0 auto; /* محاذاة الصورة للوسط */
+}
+
+
+.staff-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.staff-info h3 {
+    color: #1e2a38;
+    font-size: 18px;
+    margin: 0 0 5px;
+}
+
+.staff-info p {
+    color: #e74c3c;
+    font-size: 14px;
+    margin: 0;
+}
+
+/* Overlay Effect */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.staff-card:hover .overlay {
+    opacity: 1;
+}
+
+.action-icons {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    display: flex;
+    gap: 8px;
+}
+
+
+
+.details-btn {
+    background: rgba(255, 255, 255, 0.8);
+    color: #333;
+    padding: 10px 30px;
+    border-radius: 20px;
+    font-size: 16px;
+    text-decoration: none;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.details-btn:hover {
+    background: rgba(255, 255, 255, 1);
+}
+
+
+
+.container-bio {
+    max-width: 1200px;
+    margin: auto;
+    background: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+#bio {
+    color: #1e2a38;
+    font-size: 32px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.underline {
+    width: 60px;
+    height: 4px;
+    background-color: #1e2a38;
+    margin: 0 auto 40px;
+    position: relative;
+}
+
+.underline::before {
+    content: '';
+    width: 20px;
+    height: 4px;
+    background-color: #e74c3c;
+    position: absolute;
+    left: -30px;
+}
+
+.doctor-profile {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.doctor-card {
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    text-align: center;
+    width: 300px;
+}
+
+.doctor-card img {
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+.doctor-card h3 {
+    font-size: 22px;
+    color: #1e2a38;
+    margin-top: 15px;
+}
+
+.appointment-btn {
+    display: inline-block;
+    background: #e74c3c;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 20px;
+    transition: background 0.3s ease;
+}
+
+.appointment-btn:hover {
+    background: #c0392b;
+}
+
+.doctor-info h2 {
+    color: #1e2a38;
+    font-size: 26px;
+    margin-top: 0;
+}
+
+.doctor-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.doctor-info ul li {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.8;
+}
+
+.doctor-info ul li strong {
+    color: #1e2a38;
+}
+
+
+
+        .info-container h2 {
+            color: #2c3e50;
+            font-size: 24px;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .info-item {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        .info-item strong {
+            color: #2980b9;
+            font-size: 18px;
+        }
+
+        .info-item span {
+            color: #2c3e50;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .profile-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            border: 4px solid #3498db;
+            display: block;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #3498db;
+            color: #ffffff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #2980b9;
+        }
+

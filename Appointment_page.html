@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book an Appointment</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="finalcss.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        header {
+            position: sticky; /* Make header sticky */
+            top: 0; /* Stick to the top */
+            background-color: white; 
+            display: flex; 
+            align-items: center; 
+            justify-content: space-between; 
+            padding: 10px 20px; 
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+            z-index: 1000; /* Ensure it stays above other elements */
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #5cb85c;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #4cae4c;
+        }
+        footer {
+            margin-top: 40px; /* Space between the form and footer */
+            background-color: #152a3b; 
+            padding: 20px; 
+            text-align: center; 
+            border-top: 1px solid #bdc5c7;
+        }
+        footer a {
+            transition: background-color 0.3s, color 0.3s;
+        }
+        footer a:hover {
+            background-color: #b9ebda; /* Change background to light color on hover */
+            color: #152a3b; /* Change icon color on hover */
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <figure style="display: flex; flex-direction: column; align-items: center; margin-right: 20px; text-align: center;">
+            <img src="logo2.png" alt="Logo" style="height: 100px; margin: 0;">
+        </figure>
+        <nav style="flex: 1;">
+            <ul style="list-style-type: none; display: flex; margin: 0; padding: 0; justify-content: center;">
+                <li style="margin: 0 30px; font-size: 18px;"><a href="Home.html" style="text-decoration: none; color: #152a3b; font-weight: bold; position: relative;">Home</a></li>
+                <li style="margin: 0 30px; font-size: 18px;"><a href="about-us.html" style="text-decoration: none; color: #152a3b; font-weight: bold; position: relative;">About Us</a></li>
+            </ul>
+        </nav>
+        <div style="display: flex; align-items: center;">
+            <a href="home.html"><button style="background-color: #152a3b; color: white; border: none; border-radius: 4px; padding: 12px 24px; margin-left: 10px; cursor: pointer; font-size: 16px; min-width: 120px; max-width: 120px;">log out</button></a>        </div>
+    </header>
+    <!-- Breadcrumbs -->
+    <nav class="breadcrumb">
+        <a href="Home.html">Home</a>
+        <span>&gt;</span>
+        <a href="patient_page.html">Patient</a>
+        <span>&gt;</span>
+        <a href="Appointment_page.html">Appointment</a>
+    </nav>
+
+    <main>
+        <form id="appointmentForm">
+            <div class="form-group">
+                <label for="specialty">Select Specialty:</label>
+                <select id="specialty" name="specialty">
+                    <option value="">-- Select Specialty --</option>
+                    <option value="Physical Therapy Specialist">Physical Therapy Specialist</option>
+                    <option value="Senior Chiropractor">Senior Chiropractor</option>
+                    <option value="Specialist - Nutrition">Specialist - Nutrition</option>
+					 <option value="Physiotherapist">Physiotherapist</option>
+                </select>
+                <button type="button" id="specialtySubmit">Submit</button>
+            </div>
+        </form>
+        <br>
+
+        <form id="appointmentForm-2">
+            <label for="doctor">Select Doctor:</label>
+            <select id="doctor" name="doctor">
+                <option value="">-- Select Doctor --</option>
+                <option value="dr-john-doe">Dr. John Doe</option>
+                <option value="dr-sara-ahmad">Dr. Sara Ahmad</option>
+                <option value="loura-al-fayed">Loura Al Fayed</option>
+                <option value="muhannad-alibrahim">Muhannad Alibrahim</option>
+                <option value="brian-teo-rui-wen">Brian Teo Rui Wen</option>
+                <option value="dpt-abdulaziz-al-tuwaijri">DPT. Abdulaziz Al-Tuwaijri</option>
+            </select>
+
+            <label for="date">Select Date:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="time">Select Time:</label>
+            <input type="time" id="time" name="time" required>
+
+            <label for="reason">Reason for Visit:</label>
+            <textarea id="reason" name="reason" rows="4" required></textarea>
+
+            <button type="submit" id="submitBooking">Book Now</button>
+        </form>
+    </main>
+
+    <footer>
+        <div style="max-width: 1200px; margin: auto; color: #bdc5c7;">
+            <div style="margin-top: 20px;">
+                <a href="#" style="margin: 0 10px; border: 2px solid #198b93; border-radius: 50%; width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center; text-decoration: none; color: #198b93;">
+                    <i class="fab fa-facebook-f" style="font-size: 16px;"></i>
+                </a>
+                <a href="#" style="margin: 0 10px; border: 2px solid #198b93; border-radius: 50%; width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center; text-decoration: none; color: #198b93;">
+                    <i class="fab fa-twitter" style="font-size: 16px;"></i>
+                </a>
+                <a href="#" style="margin: 0 10px; border: 2px solid #198b93; border-radius: 50%; width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center; text-decoration: none; color: #198b93;">
+                    <i class="fab fa-instagram" style="font-size: 16px;"></i>
+                </a>
+                <a href="mailto:info@clinicname.com" style="margin: 0 10px; border: 2px solid #198b93; border-radius: 50%; width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center; text-decoration: none; color: #198b93;">
+                    <i class="fas fa-envelope" style="font-size: 16px;"></i>
+                </a>
+                <a href="https://wa.me/+1234567890" style="margin: 0 10px; border: 2px solid #198b93; border-radius: 50%; width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center; text-decoration: none; color: #198b93;">
+                    <i class="fab fa-whatsapp" style="font-size: 16px;"></i>
+                </a>
+            </div>
+            <p style="margin-top: 20px;">&copy; 2025 Reviva. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Attach event listener to the form submission
+        document.getElementById('appointmentForm-2').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+            // Redirect to the home page
+            window.location.href = 'Home.html';
+        });
+    </script>
+</body>
+</html>

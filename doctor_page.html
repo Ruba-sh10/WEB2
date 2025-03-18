@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor's Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="finalcss.css">
+	
+</head>
+
+<body>
+    <header>
+        <figure style="display: flex; flex-direction: column; align-items: center; margin-right: 20px; text-align: center;">
+            <img src="logo2.png" alt="Logo" style="height: 100px; margin: 0;">
+        </figure>
+        <nav style="flex: 1;">
+            <ul style="list-style-type: none; display: flex; margin: 0; padding: 0; justify-content: center;">
+                <li style="margin: 0 30px; font-size: 18px;"><a href="Home.html" style="text-decoration: none; color: #152a3b; font-weight: bold; position: relative;">Home</a></li>
+                <li style="margin: 0 30px; font-size: 18px;"><a href="#" style="text-decoration: none; color: #152a3b; font-weight: bold; position: relative;">About Us</a></li>
+            </ul>
+        </nav>
+        <div style="display: flex; align-items: center;">
+            <a href="home.html"><button style="background-color: #152a3b; color: white; border: none; border-radius: 4px; padding: 12px 24px; margin-left: 10px; cursor: pointer; font-size: 16px; min-width: 120px; max-width: 120px;">log out</button></a>        </div>
+    </header>
+
+
+    <!-- Breadcrumbs -->
+    <nav class="breadcrumb">
+        <a href="Home.html">Home</a>
+        <span>&gt;</span>
+        <a href="doctor_page.html">Doctor</a>
+    </nav>
+
+    
+
+    <div class="doctor-container">
+	 <section id="patient-info">
+	 <h1>Welcome, Doctor Ali</h1>
+        <section class="doctor-section">
+		 <div class="info-container">
+        <img src="MDoctor.jpg" alt="Profile Picture" class="profile-img">
+        <h2>Your Information</h2>
+        
+        <div class="info-item">
+            <strong>Full Name:</strong> <span>Ahmed Ali</span>
+        </div>
+        <div class="info-item">
+            <strong>ID:</strong> <span>123456789</span>
+        </div>
+        <div class="info-item">
+            <strong>Gender:</strong> <span>Male</span>
+        </div>
+        <div class="info-item">
+            <strong>Speciality:</strong> <span>Acupuncture</span>
+        </div>
+        <div class="info-item">
+            <strong>Email:</strong> <span>ahmed.ali@example.com</span>
+        </div>
+		 </section>
+       
+    </div>
+            <h2>Upcoming Appointments</h2>
+            <table class="doctor-styled-table">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Patient's Name</th>
+                        <th>Age</th>
+                        <th>Gender</th>
+                        <th>Reason for Visit</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>23/2/2025</td>
+                        <td>11:00 AM</td>
+                        <td>Nora Saad</td>
+                        <td>15</td>
+                        <td>Female</td>
+                        <td>Headache</td>
+                        <td><button class="doctor-confirm-btn">Confirm</button></td>
+                    </tr>
+                    <tr>
+                        <td>16/7/2025</td>
+                        <td>5:00 PM</td>
+                        <td>Majed Ahmad</td>
+                        <td>45</td>
+                        <td>Male</td>
+                        <td>Back pain</td>
+                        <td>Confirmed</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="doctor-section">
+            <h2>Your Patients</h2>
+            <table class="doctor-styled-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Gender</th>
+                        <th>Medications</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Leena Naser</td>
+                        <td>40</td>
+                        <td>Female</td>
+                        <td>Antibiotics</td>
+						                        <td><a href="prescribe_page.html" class="doctor-prescribe-link">Prescribe</a></td>
+                    </tr>
+                    <tr>
+                        <td>Majed Saleh</td>
+                        <td>35</td>
+                        <td>Male</td>
+                       <td>N/A</td>
+						                        <td><a href="prescribe_page.html" class="doctor-prescribe-link">Prescribe</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+
+    <footer>
+        <div style="max-width: 1200px; margin: auto; color: #bdc5c7;">
+            <div style="margin-top: 20px;">
+                <a href="#" style="margin: 0 10px; border: 2px solid #198b93; border-radius: 50%; width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center; text-decoration: none; color: #198b93;">
+                    <i class="fab fa-facebook-f" style="font-size: 16px;"></i>
+                </a>
+                <a href="#" style="margin: 0 10px; border: 2px solid #198b93; border-radius: 50%; width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center; text-decoration: none; color: #198b93;">
+                    <i class="fab fa-twitter" style="font-size: 16px;"></i>
+                </a>
+                <a href="#" style="margin: 0 10px; border: 2px solid #198b93; border-radius: 50%; width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center; text-decoration: none; color: #198b93;">
+                    <i class="fab fa-instagram" style="font-size: 16px;"></i>
+                </a>
+                <a href="mailto:info@clinicname.com" style="margin: 0 10px; border: 2px solid #198b93; border-radius: 50%; width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center; text-decoration: none; color: #198b93;">
+                    <i class="fas fa-envelope" style="font-size: 16px;"></i>
+                </a>
+                <a href="https://wa.me/+1234567890" style="margin: 0 10px; border: 2px solid #198b93; border-radius: 50%; width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center; text-decoration: none; color: #198b93;">
+                    <i class="fab fa-whatsapp" style="font-size: 16px;"></i>
+                </a>
+            </div>
+            <p style="margin-top: 20px;">&copy; 2025 Reviva. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
